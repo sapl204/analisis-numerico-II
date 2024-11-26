@@ -12,6 +12,7 @@ i = 0
 x = x0
 while i < iter :
     jac = J(*x)
+    print("matriz jacobiana: \n", jac)
     fun = F(*x)
     s = np.linalg.solve(jac, (-1)*fun)
     x0 = np.copy(x)
